@@ -7,6 +7,8 @@ import NavbarTwo from './component/Navbar/NavbarTwo';
 import Signup from './component/Signup/Signup';
 import Login from './component/Login/Login';
 import Footer from './component/Footer/Footer';
+import CheckOut from './component/CheckOut/CheckOut';
+import RequireAuth from './component/Require-Auth/RequireAuth';
 
 function App() {
 	return (
@@ -18,6 +20,14 @@ function App() {
 				<Route path='/about' element={<About />} />
 				<Route path='/signup' element={<Signup />} />
 				<Route path='/login' element={<Login />} />
+				<Route
+					path='/checkOut'
+					element={
+						<RequireAuth>
+							<CheckOut />
+						</RequireAuth>
+					}
+				/>
 				{/* <Route path='/blog/:id' element={<About />} /> */}
 				<Route path='*' element={<NotFound />} />
 			</Routes>

@@ -79,6 +79,7 @@
 .carddMe .iteams .imgPart img {
         width: 100%;
         height: 100vh;
+        object-fit: cover;
         /* border: 12px solid rgb(236, 236, 236); */
         /* border-bottom-right-radius: 155px;
         border-top-left-radius: 155px; */

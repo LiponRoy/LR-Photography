@@ -2,11 +2,18 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaRegWindowClose, FaSearch } from 'react-icons/fa';
 import './Navbar.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../FirebaseConfig/Firebase-config';
+import { signOut } from 'firebase/auth';
 const NavbarTwo = () => {
+	const [user] = useAuthState(auth);
 	const [showLinks, setShowLink] = useState(false);
 
 	const closeFunc = () => {
 		setShowLink(false);
+	};
+	const signOutTask = () => {
+		signOut(auth);
 	};
 	return (
 		<>
@@ -33,9 +40,17 @@ const NavbarTwo = () => {
 							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/signup'>
 								Signup
 							</NavLink>
-							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/login'>
-								Login
-							</NavLink>
+							{user ? (
+								<a onClick={signOutTask} className='signout-btn'>
+									Signout
+								</a>
+							) : (
+								<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/login'>
+									Login
+								</NavLink>
+							)}
+
+							{/* {user && <button onClick={signOutTask}>Signout</button>} */}
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Services.css';
 const DisplayData = ({ key, dat }) => {
+	const navagate = useNavigate();
 	const {
 		id,
 		title,
@@ -22,7 +24,7 @@ const DisplayData = ({ key, dat }) => {
 						<span className='card-title'>Age: {age}</span>
 						<span className='card-desc'>{description}</span>
 					</div>
-					<a href='#' class='btn btn-primary'>
+					<a onClick={() => navagate('/checkOut')} href='#' class='btn btn-primary'>
 						CLICK ME
 					</a>
 				</div>
