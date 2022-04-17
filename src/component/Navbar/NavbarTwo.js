@@ -10,16 +10,14 @@ const NavbarTwo = () => {
 	};
 	return (
 		<>
-			<div className='container-fluid'>
-				<div className='liponNav'>
+			<div className='container-fluid fixed-top'>
+				<div className='liponNav '>
 					<div className='leftSide'>
 						<div className='logo'>
 							<h4>My Photography</h4>
 						</div>
 					</div>
-					<div className='middleSide'>
-						<h5>middle side</h5>
-					</div>
+					<div className='middleSide'></div>
 					<div className='rightSide'>
 						<div className='toggleBut' onClick={() => setShowLink(!showLinks)}>
 							{showLinks ? <FaRegWindowClose></FaRegWindowClose> : <FaBars></FaBars>}
