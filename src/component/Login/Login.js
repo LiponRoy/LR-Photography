@@ -83,7 +83,7 @@ const Login = () => {
 						</div>
 						{/* <p style={{ color: 'red' }}>{error?.message}</p>
 						{loading && <p>Loading....</p>} */}
-						<button type='submit' className='btn btn-primary'>
+						<button type='submit' className='btn btn-secondary mt-2'>
 							Submit
 						</button>
 						{/* {Myerror && <p className='epError'>{Myerror}</p>} */}
