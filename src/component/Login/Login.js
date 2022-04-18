@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth, provider } from '../FirebaseConfig/Firebase-config';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { async } from '@firebase/util';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
 	const [userInfo, setUserInfo] = useState({
 		email: '',
@@ -20,6 +23,9 @@ const Login = () => {
 
 	// const [error, setError] = useState('');
 	const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+	//for password reset
+	const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+	// for navigate
 	const navagate = useNavigate();
 
 	const handleEmailonChange = event => {
@@ -53,13 +59,28 @@ const Login = () => {
 
 	// Jodi user thake tahole eivabe korte hobe, eikhane home e jabe
 	const location = useLocation();
-	const from = location.state?.from?.pathname || '/';
+	// const from = location.state?.from?.pathname || '/';
+	// if (user) {
+	// 	navagate(from, { replace: true });
+	// }
+	//or
 	if (user) {
-		navagate(from, { replace: true });
+		navagate('/');
 	}
 
 	const goToSignup = () => {
 		navagate('/signup');
+	};
+	//password reset
+	const resetPassword = async () => {
+		if (userInfo.email) {
+			await sendPasswordResetEmail(userInfo.email);
+			toast('Sending email');
+		} else {
+			toast('Please enter email');
+		}
+
+		// alert('Sent email');
 	};
 	return (
 		<div>
@@ -73,12 +94,12 @@ const Login = () => {
 					<form onSubmit={handleSignIn} className='my-signup-form'>
 						<div className='form-group'>
 							<label for='exampleInputEmail1'>Email address</label>
-							<input type='email' onChange={handleEmailonChange} className='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Enter email' />
+							<input type='email' onChange={handleEmailonChange} className='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Enter email' required />
 							{userError?.email && <p className='epError'>{userError.email}</p>}
 						</div>
 						<div className='form-group'>
 							<label for='exampleInputPassword1'>Password</label>
-							<input type='password' onChange={handlePasswordonChange} className='form-control' id='exampleInputPassword1' placeholder='Password' />
+							<input type='password' onChange={handlePasswordonChange} className='form-control' id='exampleInputPassword1' placeholder='Password' required />
 							{userError?.password && <p className='epError'>{userError.password}</p>}
 						</div>
 						{/* <p style={{ color: 'red' }}>{error?.message}</p>
@@ -93,7 +114,15 @@ const Login = () => {
 								Create Account
 							</span>
 						</p>
+						<br></br>
+						<p>
+							Forget Password ?{' '}
+							<span onClick={resetPassword} className='goToSignupPage'>
+								Reset Password
+							</span>
+						</p>
 					</form>
+					<ToastContainer />
 				</div>
 				<div className='col-md-3'></div>
 			</div>

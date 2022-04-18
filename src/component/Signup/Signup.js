@@ -70,13 +70,17 @@ const Signup = () => {
 	// valovabe singup hole home e jao
 	const navigate = useNavigate();
 	const location = useLocation();
-	const from = location.state?.from?.pathname || '/';
+	// const from = location.state?.from?.pathname || '/';
 
-	useEffect(() => {
-		if (user) {
-			navigate(from);
-		}
-	}, [user]);
+	// useEffect(() => {
+	// 	if (user) {
+	// 		navigate(from);
+	// 	}
+	// }, [user]);
+	//or
+	if (user) {
+		navigate('/');
+	}
 
 	//.............
 
@@ -92,17 +96,17 @@ const Signup = () => {
 						<form onSubmit={handleCreateUser} className='my-signup-form'>
 							<div className='form-group'>
 								<label htmlFor='exampleInputEmail1'>Email address</label>
-								<input type='email' onChange={handleEmail} className='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Enter email' />
+								<input type='email' onChange={handleEmail} className='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Enter email' required />
 								{userError?.emailError && <p className='signUpError'>{userError.emailError}</p>}
 							</div>
 							<div className='form-group'>
 								<label htmlFor='exampleInputPassword1'>Password</label>
-								<input type='password' onChange={handlePassword} className='form-control' id='exampleInputPassword1' placeholder='Password' />
+								<input type='password' onChange={handlePassword} className='form-control' id='exampleInputPassword1' placeholder='Password' required />
 								{userError?.passwordError && <p className='signUpError'>{userError.passwordError}</p>}
 							</div>
 							<div className='form-group'>
 								<label htmlFor='exampleInputConfirmPassword'>Password</label>
-								<input type='password' onChange={handleConfirmPassword} className='form-control' id='exampleInputPassword1' placeholder='Password' />
+								<input type='password' onChange={handleConfirmPassword} className='form-control' id='exampleInputPassword1' placeholder='Password' required />
 								{userError?.confirmPasswordError && <p className='signUpError'>{userError.confirmPasswordError}</p>}
 							</div>
 							<button type='submit' className='btn btn-secondary mt-2'>
