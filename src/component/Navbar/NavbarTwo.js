@@ -52,8 +52,6 @@ const NavbarTwo = () => {
 									Login
 								</NavLink>
 							)}
-
-							{/* {user && <button onClick={signOutTask}>Signout</button>} */}
 						</div>
 					</div>
 				</div>

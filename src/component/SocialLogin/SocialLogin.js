@@ -1,4 +1,5 @@
 import React from 'react';
+import { FcGoogle } from 'react-icons/fc';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { auth, provider } from '../FirebaseConfig/Firebase-config';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -26,8 +27,8 @@ const SocialLogin = () => {
 	}
 	return (
 		<div>
-			<button onClick={() => signInWithGoogle()} className=' btn btn-secondary mt-4'>
-				Google sign
+			<button onClick={() => signInWithGoogle()} className=' btn btn-outline-secondary mt-1'>
+				<FcGoogle size={20}></FcGoogle> Google login
 			</button>
 		</div>
 	);

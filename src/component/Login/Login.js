@@ -17,17 +17,12 @@ const Login = () => {
 		general: '',
 	});
 
-	// const [email, setEmail] = useState('');
-	// const [password, setpassword] = useState('');
-	// const [Myerror, setMyerror] = useState('');
-
-	// const [error, setError] = useState('');
 	const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 	//for password reset
 	const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 	// for navigate
 	const navagate = useNavigate();
-
+	// email input
 	const handleEmailonChange = event => {
 		const emailREGEX = /\S+@\S+\.\S+/;
 		const validEmail = emailREGEX.test(event.target.value);
@@ -39,6 +34,7 @@ const Login = () => {
 			setUserInfo({ ...userInfo, email: '' });
 		}
 	};
+	// password input
 	const handlePasswordonChange = event => {
 		const passwordREGEX = /.{6,}/;
 		const validPassword = passwordREGEX.test(event.target.value);
@@ -49,9 +45,9 @@ const Login = () => {
 			setUserError({ ...userError, password: 'minimum 6 charecter' });
 			setUserInfo({ ...userInfo, password: '' });
 		}
-		// setpassword(event.target.value);
 	};
 
+	// submit
 	const handleSignIn = event => {
 		event.preventDefault();
 		signInWithEmailAndPassword(userInfo.email, userInfo.password);
@@ -59,15 +55,11 @@ const Login = () => {
 
 	// Jodi user thake tahole eivabe korte hobe, eikhane home e jabe
 	const location = useLocation();
-	// const from = location.state?.from?.pathname || '/';
-	// if (user) {
-	// 	navagate(from, { replace: true });
-	// }
-	//or
+	const from = location.state?.from?.pathname || '/';
 	if (user) {
-		navagate('/');
+		navagate(from, { replace: true });
 	}
-
+	//go to signup page
 	const goToSignup = () => {
 		navagate('/signup');
 	};
@@ -79,8 +71,6 @@ const Login = () => {
 		} else {
 			toast('Please enter email');
 		}
-
-		// alert('Sent email');
 	};
 	return (
 		<div>
@@ -102,12 +92,10 @@ const Login = () => {
 							<input type='password' onChange={handlePasswordonChange} className='form-control' id='exampleInputPassword1' placeholder='Password' required />
 							{userError?.password && <p className='epError'>{userError.password}</p>}
 						</div>
-						{/* <p style={{ color: 'red' }}>{error?.message}</p>
-						{loading && <p>Loading....</p>} */}
+
 						<button type='submit' className='btn btn-secondary mt-2'>
 							Submit
 						</button>
-						{/* {Myerror && <p className='epError'>{Myerror}</p>} */}
 					</form>
 					<p className='resetPass-part m-2'>
 						<div className=''>

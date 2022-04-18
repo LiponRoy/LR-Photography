@@ -17,13 +17,9 @@ const Signup = () => {
 		generalError: '',
 	});
 
-	// const [email, setEmail] = useState('');
-	// const [password, setpassword] = useState('');
-	// const [confirmPassword, setconfirmPassword] = useState('');
-	// const [error, setError] = useState('');
 	const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 	//for google signin
-
+	// for email
 	const handleEmail = event => {
 		const emailREGEX = /\S+@\S+\.\S+/;
 		const validEmail = emailREGEX.test(event.target.value);
@@ -47,7 +43,6 @@ const Signup = () => {
 			setUserError({ ...userError, passwordError: 'minimum 6 charecter' });
 			setUserInfo({ ...userInfo, password: '' });
 		}
-		// setpassword(event.target.value);
 	};
 
 	// for confirm password
@@ -61,7 +56,7 @@ const Signup = () => {
 			setUserInfo({ ...userInfo, confirmPassword: '' });
 		}
 	};
-
+	//submit
 	const handleCreateUser = event => {
 		event.preventDefault();
 		createUserWithEmailAndPassword(userInfo.email, userInfo.password);
@@ -70,19 +65,18 @@ const Signup = () => {
 	// valovabe singup hole home e jao
 	const navigate = useNavigate();
 	const location = useLocation();
-	// const from = location.state?.from?.pathname || '/';
+	const from = location.state?.from?.pathname || '/';
 
-	// useEffect(() => {
-	// 	if (user) {
-	// 		navigate(from);
-	// 	}
-	// }, [user]);
-	//or
-	if (user) {
-		navigate('/');
-	}
+	useEffect(() => {
+		if (user) {
+			navigate(from);
+		}
+	}, [user]);
 
-	//.............
+	//go to google
+	const goToLogin = () => {
+		navigate('/login');
+	};
 
 	return (
 		<div className='container'>
@@ -115,6 +109,12 @@ const Signup = () => {
 							<p style={{ color: 'red' }}>{error?.message}</p>
 							{/* <p style={{ color: 'blue' }}>{loading}</p> */}
 						</form>
+						<div className='m-2'>
+							<span>Already have account ?</span>
+							<span onClick={goToLogin} className='goToSignupPage '>
+								login page
+							</span>
+						</div>
 						<SocialLogin></SocialLogin>
 					</div>
 					<div className='col-md-3'></div>
