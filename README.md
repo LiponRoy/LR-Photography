@@ -1,10 +1,10 @@
 # LR Photography
 
-Project Live Link : (https://github.com/facebook/create-react-app).
+Project Live Link : https://react-firebase-auth-lipon.web.app/
 
 ## What I have done
 
--  I have made a nav bar witch include nav link and website logo
+-  I have made a nav bar witch include nav link and website logo.
 -  Used Silk Slider to make fantastic image slide show.
 -  Used Google Firebase Auth, include signup, login, reset password, email verification and so on.
 
