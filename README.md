@@ -1,8 +1,23 @@
-# Getting Started with Create React App
+# LR Photography
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Live Link : (https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## What I have done
+
+-  I have made a nav bar witch include nav link and website logo
+-  Used Silk Slider to make fantastic image slide show.
+-  Used Google Firebase Auth, include signup, login, reset password, email verification and so on.
+
+*  react routing include protected routing.
+*  include footer component, about component.
+
+## library and package used
+
+-  npm Firebase
+-  Bootstrap
+-  react-router-dom
+-  react-toastify
+-  react-icons and so on
 
 In the project directory, you can run:
 

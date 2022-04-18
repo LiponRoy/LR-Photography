@@ -12,7 +12,7 @@ const About = () => {
 						</div>
 						<div className='alltext'>
 							<span>Lipon Roy</span>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas error perspiciatis laboriosam distinctio modi dolores ut quisquam sunt cum animi facere illo deleniti porro, tempore id impedit nihil.lorem.Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas error perspiciatis laboriosam distinctio modi dolores ut quisquam sunt cum animi facere illo deleniti porro, tempore id impedit nihil.lorem.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas error perspiciatis laboriosam distinctio modi dolores ut quisquam sunt cum animi facere illo deleniti porro, tempore id impedit nihil.lorem</p>
+							<p>I want to be a Softwer engineer. I love computer programming. I have completed my Ms degree in computer science and engineering from jagannath university dhaka, I know verious type of programming language such as java, c,c++, javascript, go and many more, I know React js, express js, node js, mongodb database, sql database,mysql database and so on.A portfolio is not a resume. It is a showcase of completed work rather than a description of experience. For a developer, developing an online portfolio is the perfect way to flaunt the tricks of your trade. A web developer's portfolio is the evidence to support the claims you have made in your resume.</p>
 						</div>
 					</div>
 				</div>
