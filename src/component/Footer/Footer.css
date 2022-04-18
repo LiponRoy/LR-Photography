@@ -43,3 +43,15 @@
     align-items: center;
     font-size: 17px;
 }
+
+@media (max-width: 768px) {
+
+    .footer_middleSide {
+        display: none;
+    }
+    .footer_rightSide {
+        display: none;
+    }
+
+
+}

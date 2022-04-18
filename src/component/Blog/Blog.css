@@ -1,5 +1,5 @@
-.blogMe {
-    height: 100vh;
+.blogPart {
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,8 +7,11 @@
 
     padding: 200px;
 
+   
+
 
 }
 .QA{
-    text-align: start;
+ text-align: start;
+
 }
