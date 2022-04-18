@@ -64,6 +64,10 @@
                         position: absolute;
                         bottom: 140px;
                         left: 100px;
+                        background-color: rgba(46, 29, 141, 0.493);
+                        padding: 22px;
+                        border-radius: 12px;
+
                     }
 
 

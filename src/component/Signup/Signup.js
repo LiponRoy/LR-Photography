@@ -3,6 +3,7 @@ import './Signup.css';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth, provider } from '../FirebaseConfig/Firebase-config';
 import { useLocation, useNavigate } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const Signup = () => {
 	const [userInfo, setUserInfo] = useState({
 		email: '',
@@ -20,7 +21,8 @@ const Signup = () => {
 	// const [password, setpassword] = useState('');
 	// const [confirmPassword, setconfirmPassword] = useState('');
 	// const [error, setError] = useState('');
-	const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+	const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+	//for google signin
 
 	const handleEmail = event => {
 		const emailREGEX = /\S+@\S+\.\S+/;
@@ -110,6 +112,7 @@ const Signup = () => {
 							<p style={{ color: 'red' }}>{error?.message}</p>
 							{/* <p style={{ color: 'blue' }}>{loading}</p> */}
 						</form>
+						<SocialLogin></SocialLogin>
 					</div>
 					<div className='col-md-3'></div>
 				</div>

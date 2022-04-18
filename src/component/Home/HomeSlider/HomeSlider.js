@@ -4,22 +4,36 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import Slider from 'react-slick';
+import img0 from '../../assets/slideImg/s1.jpg';
 import img1 from '../../assets/slideImg/s2.jpg';
 import img2 from '../../assets/slideImg/s3.jpg';
+import img3 from '../../assets/slideImg/s4.jpg';
 
 const HomeSlider = () => {
 	const dataMe = [
 		{
-			price: '312',
+			name: 'Personal Photography',
+
+			desc: 'Lorem ipsum dolor sit amet ',
+			img: img0,
+		},
+		{
+			name: 'Birthday Photography',
 
 			desc: 'Lorem ipsum dolor sit amet ',
 			img: img1,
 		},
 		{
-			price: '5445',
+			name: 'Wedding Photography',
 
 			desc: 'Lorem ipsum dolor sit amet',
 			img: img2,
+		},
+		{
+			name: 'Food Photography',
+
+			desc: 'Lorem ipsum dolor sit amet',
+			img: img3,
 		},
 	];
 
@@ -71,7 +85,7 @@ const HomeSlider = () => {
 											/>
 											<div className='textAll'>
 												<div className=''>
-													<h1>{daa.price}</h1>
+													<h1>{daa.name}</h1>
 													<span>{daa.desc}</span>
 												</div>
 											</div>

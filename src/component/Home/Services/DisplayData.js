@@ -15,7 +15,7 @@ const DisplayData = ({ key, dat }) => {
 		<div key={key} className='col-md-4'>
 			{/* using bootstrap card and display props value */}
 			<div class='card m-2'>
-				<img className='card-img-top' src={image} alt='Card image cap' />
+				<img className='card-img-top service-image' src={image} alt='Card image cap' width='200px' height='400px' />
 				<div className='card-body'>
 					<div className='cardText'>
 						<span className='card-id'>ID No: {id}</span>
