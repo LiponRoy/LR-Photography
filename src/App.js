@@ -31,7 +31,7 @@ function App() {
 						</RequireAuth>
 					}
 				/>
-
+				{/* <Route path='/blog/:id' element={<About />} /> */}
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 			<Footer></Footer>
