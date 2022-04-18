@@ -26,7 +26,7 @@ const SocialLogin = () => {
 	}
 	return (
 		<div>
-			<button onClick={() => signInWithGoogle()} className=' btn btn-outline-secondary mt-4'>
+			<button onClick={() => signInWithGoogle()} className=' btn btn-secondary mt-4'>
 				Google sign
 			</button>
 		</div>

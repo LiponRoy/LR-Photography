@@ -9,6 +9,7 @@ import Login from './component/Login/Login';
 import Footer from './component/Footer/Footer';
 import CheckOut from './component/CheckOut/CheckOut';
 import RequireAuth from './component/Require-Auth/RequireAuth';
+import Blog from './component/Blog/Blog';
 
 function App() {
 	return (
@@ -18,6 +19,8 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />
+				<Route path='/blog' element={<Blog />} />
+
 				<Route path='/signup' element={<Signup />} />
 				<Route path='/login' element={<Login />} />
 				<Route

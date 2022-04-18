@@ -1,46 +1,46 @@
 [
     {
         "id":1,
-        "title":"Lorem ipsum",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas sint veniam. At porro voluptatibus suscipit voluptatum! Temporibus aperiam impedit officia voluptates praesentium! Eos sequi tempore commodi praesentium facere ea.",
+        "title":"Birthday Photography",
+        "description":"I will provide Birthday Photograph. My being alive and healthy today is as a result of none other than the almighty God. I'll forever be grateful to you, God. Happy birthday to myself. On my special day, I wish myself happiness and great accomplishments in the coming year.",
         "image":"img/birthday.jpg",
         "persion":{"name":"kanon","age":32}
     },
         {
         "id":2,
-        "title":"i am simple counter",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas sint veniam. At porro voluptatibus suscipit voluptatum! Temporibus aperiam impedit officia voluptates praesentium! Eos sequi tempore commodi praesentium facere ea.",
+        "title":"Personal Photography",
+        "description":"I will provide Personal Photograph. Full-time photographers can typically make anywhere between $30,000 and $75,000 per year, and some make even . Many photographers prefer to transition into photography part-time so they can get an idea of if it will be financially.",
         "image":"img/personal.jpg",
         "persion":{"name":"Bissojit","age":25}
 
     },
         {
         "id":3,
-        "title":"hi hello ki obosta",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas sint veniam. At porro voluptatibus suscipit voluptatum! Temporibus aperiam impedit officia voluptates praesentium! Eos sequi tempore commodi praesentium facere ea.",
+        "title":"Food Photography",
+        "description":"Camera eats first is the behavior and global phenomenon of people taking photos of their meals with digital or smartphone cameras before they eat, mostly followed by uploading the photos to the social media part-time so they can get an idea of if it..",
          "image":"img/food.jpg",
         "persion":{"name":"didarul","age":52}
 
     },    {
         "id":4,
-        "title":"something is better",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas sint veniam. At porro voluptatibus suscipit voluptatum! Temporibus aperiam impedit officia voluptates praesentium! Eos sequi tempore commodi praesentium facere ea.",
+        "title":"Social Photography",
+        "description":"It is a form of documentary photography, with the aim to draw the public's attention to ongoing social issues. It may also refer to a socially critical genre of photography dedicated to showing the life of underprivileged or disadvantaged people..",
          "image":"img/socialM.jpg",
         "persion":{"name":"Bipul","age":33}
 
     },
         {
         "id":5,
-        "title":"i am simple counter",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas sint veniam. At porro voluptatibus suscipit voluptatum! Temporibus aperiam impedit officia voluptates praesentium! Eos sequi tempore commodi praesentium facere ea.",
+        "title":"Wedding Photography",
+        "description":"I will provide Wedding Photograph. As every niche of photography, wedding photography also has its various approaches. When a couple chooses their photographer, what they first look at is the style of their images.It may also refer to a socially critical genre of photography",
          "image":"img/wedding.jpg",
         "persion":{"name":"sumon","age":44}
 
     },
         {
         "id":6,
-        "title":"hi hello ki obosta",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas sint veniam. At porro voluptatibus suscipit voluptatum! Temporibus aperiam impedit officia voluptates praesentium! Eos sequi tempore commodi praesentium facere ea.",
+        "title":"Product Photography",
+        "description":"Camera eats first is the behavior and global phenomenon of people taking photos of their meals with digital or smartphone cameras before they eat, mostly followed by uploading the photos to the social media.When a couple chooses their photographer,",
          "image":"img/product.jpg",
         "persion":{"name":"ismail","age":21}
 

@@ -8,11 +8,11 @@ const About = () => {
 				<div className='col-md-6'>
 					<div>
 						<div className='me-image'>
-							<img src='img/me.jpg' width='400px' alt='no-image' />
+							<img className=' img-thumbnail' src='img/me.jpg' width='300px' alt='no-image' />
 						</div>
 						<div className='alltext'>
-							<span>Ami kichu kori</span>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas error perspiciatis laboriosam distinctio modi dolores ut quisquam sunt cum animi facere illo deleniti porro, tempore id impedit nihil.</p>
+							<span>Lipon Roy</span>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas error perspiciatis laboriosam distinctio modi dolores ut quisquam sunt cum animi facere illo deleniti porro, tempore id impedit nihil.lorem.Lorem, ipsum dolor sit amet consectetur adipisicing elit.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas error perspiciatis laboriosam distinctio modi dolores ut quisquam sunt cum animi facere illo deleniti porro, tempore id impedit nihil.lorem.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam voluptas error perspiciatis laboriosam distinctio modi dolores ut quisquam sunt cum animi facere illo deleniti porro, tempore id impedit nihil.lorem</p>
 						</div>
 					</div>
 				</div>

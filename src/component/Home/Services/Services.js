@@ -7,10 +7,8 @@ const Services = () => {
 	return (
 		<div>
 			<div className='row'>
-				<div className='heading'>
-					<br />
-					<h1>My services</h1>
-					<br />
+				<div className='heading mt-5'>
+					<h2>My photography services include:</h2>
 				</div>
 				{/* use Map function for data */}
 				{data.map((dat, key) => (

@@ -1,0 +1,14 @@
+.check  {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+    font-size: 26px;
+    margin-top: 52px;
+
+
+}
+.check-heading{
+    font-size: 32px;
+}

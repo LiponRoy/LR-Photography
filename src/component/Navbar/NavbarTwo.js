@@ -21,7 +21,7 @@ const NavbarTwo = () => {
 				<div className='liponNav '>
 					<div className='leftSide'>
 						<div className='logo'>
-							<h4>My Photography</h4>
+							<span>LR Photography</span>
 						</div>
 					</div>
 					<div className='middleSide'></div>
@@ -36,6 +36,9 @@ const NavbarTwo = () => {
 
 							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/about'>
 								About
+							</NavLink>
+							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/blog'>
+								Blog
 							</NavLink>
 							<NavLink onClick={closeFunc} className={({ isActive }) => (isActive ? ' active-myLink' : 'myLink')} to='/signup'>
 								Signup

@@ -12,8 +12,16 @@
 }
 .leftSide{
 flex: 1;
+color: white;
+text-transform: capitalize;
 
 
+}
+.logo span{
+/* background-color: darkcyan; */
+padding: 12px;
+border-radius: 10px;
+border: solid 1px white;
 }
 
 .middleSide{

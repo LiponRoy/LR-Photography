@@ -1,3 +1,40 @@
+
+
+.card-body{
+    margin: 20px;
+}
+
 .service-image{
     object-fit: cover;
+}
+
+.cardText-me{
+    text-align: justify;
+}
+.cardText-me .card-title {
+    text-align: start;
+    display: block;
+    font-size: 22px;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.76);
+    padding-bottom: 5px;
+
+
+}
+.card-btn{
+    text-decoration: none;
+    background-color: rgba(8, 105, 196, 0.781);
+    color: white;
+    padding: 10px 66px;
+    width: 400px;
+}
+.card-btn:hover{
+    color: white;
+}
+
+.heading h2{
+    text-transform: uppercase;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.76);
+    width: 50%;
+    margin:auto;
+    padding-bottom: 5px;
 }

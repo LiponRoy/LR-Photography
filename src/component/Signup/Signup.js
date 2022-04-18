@@ -90,10 +90,9 @@ const Signup = () => {
 				<div className='row'>
 					<div className='col-md-3'></div>
 					<div className='col-md-6 signup-contain'>
-						<div className='text-center'>
-							<h1>Signup page</h1>
-						</div>
+						<div className='text-center'></div>
 						<form onSubmit={handleCreateUser} className='my-signup-form'>
+							<h3 className=' mb-3'>Signup </h3>
 							<div className='form-group'>
 								<label htmlFor='exampleInputEmail1'>Email address</label>
 								<input type='email' onChange={handleEmail} className='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Enter email' required />
@@ -106,7 +105,7 @@ const Signup = () => {
 							</div>
 							<div className='form-group'>
 								<label htmlFor='exampleInputConfirmPassword'>Password</label>
-								<input type='password' onChange={handleConfirmPassword} className='form-control' id='exampleInputPassword1' placeholder='Password' required />
+								<input type='password' onChange={handleConfirmPassword} className='form-control' id='exampleInputPassword1' placeholder='ConfirmPassword' required />
 								{userError?.confirmPasswordError && <p className='signUpError'>{userError.confirmPasswordError}</p>}
 							</div>
 							<button type='submit' className='btn btn-secondary mt-2'>

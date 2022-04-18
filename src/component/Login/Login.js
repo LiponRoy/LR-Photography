@@ -85,13 +85,13 @@ const Login = () => {
 	return (
 		<div>
 			<div className='container'></div>
-			<div className='text-center'>
-				<h1>Login page</h1>
-			</div>
+
 			<div className='row'>
 				<div className='col-md-3'></div>
 				<div className='col-md-6 signup-contain'>
+					<div className='text-center'></div>
 					<form onSubmit={handleSignIn} className='my-signup-form'>
+						<h3 className=' mb-3'>Login</h3>
 						<div className='form-group'>
 							<label for='exampleInputEmail1'>Email address</label>
 							<input type='email' onChange={handleEmailonChange} className='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Enter email' required />
@@ -108,20 +108,22 @@ const Login = () => {
 							Submit
 						</button>
 						{/* {Myerror && <p className='epError'>{Myerror}</p>} */}
-						<p>
-							Don't have account ?{' '}
-							<span onClick={goToSignup} className='goToSignupPage'>
+					</form>
+					<p className='resetPass-part m-2'>
+						<div className=''>
+							<span>Don't have account ?</span>
+							<span onClick={goToSignup} className='goToSignupPage m-2'>
 								Create Account
 							</span>
-						</p>
-						<br></br>
-						<p>
-							Forget Password ?{' '}
-							<span onClick={resetPassword} className='goToSignupPage'>
+						</div>
+						<div className=''>
+							<span>Forget Password ?</span>
+							<span onClick={resetPassword} className='goToSignupPage m-2'>
 								Reset Password
 							</span>
-						</p>
-					</form>
+						</div>
+					</p>
+
 					<ToastContainer />
 				</div>
 				<div className='col-md-3'></div>
